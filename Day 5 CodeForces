@@ -1,0 +1,22 @@
+A. Domino piling
+
+import java.util.Scanner;
+ 
+public class DominoPiling {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+ 
+        int M = sc.nextInt();
+        int N = sc.nextInt();
+        int sqr = (M*N);
+        int domino = 0;
+ 
+        if(sqr % 2 != 0)
+        {
+            domino = (sqr - 1)/2;
+        }else{
+            domino = sqr/2;
+        }
+        System.out.print(domino);
+    }
+}
