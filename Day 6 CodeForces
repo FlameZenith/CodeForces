@@ -1,0 +1,35 @@
+A. Boy or Girl
+
+Solution :- 
+
+import java.util.Scanner;
+ 
+public class GirlAndBoy {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+ 
+        String s = sc.nextLine();
+ 
+        int count = 0;
+        int length = s.length();
+ 
+        for (int i = 1 ; i < length ; i++)
+        {
+            for (int j = 0 ; j < i ; j++)
+            {
+                if(s.charAt(i) == s.charAt(j))
+                {
+                    count++;
+                    break;
+                }
+            }
+        }
+        if ((length - count) % 2 == 0)
+        {
+            System.out.println("CHAT WITH HER!");
+        }else {
+            System.out.println("IGNORE HIM!");
+        }
+        sc.close();
+    }
+}
